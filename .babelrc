@@ -1,8 +1,12 @@
 {
-  "presets": ["env", "react", "flow"],
+  "only": [
+    "./src",
+    "./node_modules/react-select"
+  ],
+  "presets": ["@babel/env", "@babel/react", "@babel/flow"],
   "plugins": [
-  	"transform-class-properties",
-  	"transform-object-rest-spread",
+  	"@babel/plugin-proposal-class-properties",
+  	"@babel/plugin-proposal-object-rest-spread",
   	"lodash"
   ],
   "env": {
@@ -12,7 +16,7 @@
       ]
     },
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
     }
   }
 }
